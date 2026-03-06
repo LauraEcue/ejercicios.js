@@ -25,7 +25,20 @@ function esMayorDeEdad(edad) {
 
 
 // Test 2:
-function clasificarTriangulo(lado1, lado2, lado3) {
+function clasificarTriangulo(lado1, lado2, lado3) { 
+	if ( lado1 + lado2 <=lado3 | lado2 + lado3 <= lado1 
+		| lado1 + lado3 <= lado2) {
+			 return "No es triángulo";}
+	if (lado1 === lado2 && lado2 === lado3) {
+    return "Equilátero";
+  } 
+  else if (lado1 === lado2 || lado1 === lado3 || lado2 === lado3) {
+    return "Isósceles";
+  } 
+  else {
+    return "Escaleno";
+  }
+}	
 	// Recibe tres números representando los lados de un triángulo.
 	// Devuelve:
 	// - "Equilátero" si los tres lados son iguales
@@ -33,7 +46,7 @@ function clasificarTriangulo(lado1, lado2, lado3) {
 	// - "Escaleno" si todos los lados son diferentes
 	// - "No es triángulo" si no cumple la propiedad triangular
 	// Tu código:
-}
+
 
 // Test 3:
 function calcularDescuento(precio, esMiembro, esFinDeSemana) {
