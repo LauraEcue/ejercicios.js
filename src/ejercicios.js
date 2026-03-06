@@ -149,13 +149,13 @@ function redondearNumero(num) { return Math.round(num)
 }
 
 // Test 23
-function redondearHaciaArriba(num) {
+function redondearHaciaArriba(num) { return Math.ceil(num)
 	// Redondea "num" hacia arriba (al próximo entero) y devuélvelo
 	// Tu código:
 }
 
 // Test 24
-function numeroRandom() {
+function numeroRandom() {  return Math.random()
 	//Generar un número al azar entre 0 y 1 y devolverlo
 	//Pista: investigá qué hace el método Math.random()
 	// Tu código:
@@ -163,6 +163,11 @@ function numeroRandom() {
 
 // Test 25
 function esPositivo(numero) {
+	if (numero > 0) {
+		 return "Es positivo";} 
+		 else if (numero < 0 )
+			{ return "Es negativo";} else if
+		  (numero === 0 ) { return false; }
 	//La función va a recibir un entero. Devuelve como resultado una cadena de texto que indica si el número es positivo o negativo.
 	//Si el número es positivo, devolver ---> "Es positivo"
 	//Si el número es negativo, devolver ---> "Es negativo"
@@ -171,46 +176,46 @@ function esPositivo(numero) {
 }
 
 // Test 26
-function agregarSimboloExclamacion(str) {
+function agregarSimboloExclamacion(str) { return str + "!"; 
 	// Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
 	// Ejemplo: "hello world" pasaría a ser "hello world!"
 	// Tu código:
 }
 
 // Test 27
-function combinarNombres(nombre, apellido) {
+function combinarNombres(nombre, apellido) {return nombre + " " + apellido;
 	// Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
 	// Ejemplo: "Soy", "Hola" -> "Soy Hola"
 	// Tu código:
 }
 
 // Test 28
-function obtenerSaludo(nombre) {
+function obtenerSaludo(nombre) { return "Hola " + nombre + "!" ;
 	// Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
 	// "Martin" -> "Hola Martin!"
 	// Tu código:
 }
 
 // Test 29
-function obtenerAreaRectangulo(alto, ancho) {
+function obtenerAreaRectangulo(alto, ancho) { return alto * ancho; 
 	// Retornar el area de un rectángulo teniendo su altura y ancho
 	// Tu código:
 }
 
 // Test 30
-function retornarPerimetro(lado) {
+function retornarPerimetro(lado) { return lado * 4; 
 	//Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
 	//Escribe tu código aquí
 }
 
 // Test 31
-function areaDelTriangulo(base, altura) {
+function areaDelTriangulo(base, altura) { return (base * altura) / 2;
 	//Desarrolle una función que calcule el área de un triángulo.
 	//Escribe tu código aquí
 }
 
 // Test 32
-function deEuroAdolar(euro) {
+function deEuroAdolar(euro) { return euro * 1.20
 	//Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
 	//como parámetro un número de euros y calcule el cambio en dólares.
 	//Escribe tu código aquí
@@ -218,12 +223,21 @@ function deEuroAdolar(euro) {
 
 // Test 33
 function esVocal(letra) {
+	if (letra.length !==  1)  {
+		return "Dato incorrecto"; 
+	 }
+	 if (letra == 'a' || letra == 'e' || letra == 'i' || 
+        letra == 'o' || letra == 'u') {
+        return "Es vocal";
+    } 
+        return "Dato incorrecto";
+    }
 	//Escribe una función que reciba una letra y, si es una vocal, muestre el mensaje “Es vocal”.
 	//Verificar si el usuario ingresó un string de más de un carácter, en ese caso, informarle
 	//que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
 	// Si no es vocal, tambien debe devolver "Dato incorrecto".
 	//Escribe tu código aquí
-}
+
 
 // No modificar nada debajo de esta línea
 // --------------------------------
