@@ -12,10 +12,17 @@
 
 // Test 1:
 function esMayorDeEdad(edad) {
-	// Recibe un número representando la edad de una persona.
+  if (edad >= 18) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+		// Recibe un número representando la edad de una persona.
 	// Devuelve true si la edad es mayor o igual a 18, false en caso contrario.
 	// Tu código:
-}
+
 
 // Test 2:
 function clasificarTriangulo(lado1, lado2, lado3) {
