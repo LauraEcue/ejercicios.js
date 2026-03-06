@@ -50,92 +50,100 @@ function suma(x, y) { return x + y
 }
 
 // Test 9
-function resta(x, y) {
+function resta(x, y) {return x - y
 	// Resta "y" de "x" y devuelve el valor
 	// Tu código:
 }
 
 // Test 10
-function divide(x, y) {
+function divide(x, y) { return x / y
 	// Divide "x" entre "y" y devuelve el valor
 	// Tu código:
 }
 
 // Test 11
-function multiplica(x, y) {
+function multiplica(x, y) { return x * y
 	// Multiplica "x" por "y" y devuelve el valor
 	// Tu código:
 }
 
 // Test 12
-function sonIguales(x, y) {
+function sonIguales(x, y) { return x == y
 	// Devuelve "true" si "x" e "y" son iguales
 	// De lo contrario, devuelve "false"
 	// Tu código:
 }
 
 // Test 13
-function tienenMismaLongitud(str1, str2) {
+function tienenMismaLongitud(str1, str2) { 
+	if (str1.length === str2.length) { return true;} else {
+    return false;
+  }
+}
 	// Devuelve "true" si las dos strings tienen la misma longitud
 	// De lo contrario, devuelve "false"
 	// Tu código:
-}
+
 
 // Test 14
-function menosQueNoventa(num) {
+function menosQueNoventa(num) { 
+	if (num < 90) { return true;} else { return false; } 
 	// Devuelve "true" si el argumento de la función "num" es menor que noventa
 	// De lo contrario, devuelve "false"
 	// Tu código:
 }
 
 // Test 15
-function mayorQueCincuenta(num) {
+function mayorQueCincuenta(num) { 
+	if ( num > 50) { return true; } else { return false; }
 	// Devuelve "true" si el argumento de la función "num" es mayor que cincuenta
 	// De lo contrario, devuelve "false"
 	// Tu código:
 }
 
 // Test 16
-function obtenerResto(x, y) {
+function obtenerResto(x, y) { return x % y
 	// Obten el resto de la división de "x" entre "y"
 	// Tu código:
 }
 
 // Test 17
-function esPar(num) {
+function esPar(num) { 
+	if (num % 2 === 0) { return true; } else { return false;}
 	// Devuelve "true" si "num" es par
 	// De lo contrario, devuelve "false"
 	// Tu código:
 }
 
 // Test 18
-function esImpar(num) {
+function esImpar(num) {  
+	if (num % 2 !== 0) { return true; } else { return false;}
 	// Devuelve "true" si "num" es impar
 	// De lo contrario, devuelve "false"
 	// Tu código:
 }
 
 // Test 19
-function elevarAlCuadrado(num) {
+function elevarAlCuadrado(num) { return Math.pow(num, 2)
 	// Devuelve el valor de "num" elevado al cuadrado
 	// ojo: No es raiz cuadrada!
 	// Tu código:
 }
 
 // Test 20
-function elevarAlCubo(num) {
+function elevarAlCubo(num) { return Math.pow (num, 3)
 	// Devuelve el valor de "num" elevado al cubo
 	// Tu código:
 }
 
 // Test 21
-function elevar(num, exponent) {
+function elevar(num, exponent) { return Math.pow(num, exponent)
 	// Devuelve el valor de "num" elevado al exponente dado en "exponent"
 	// Tu código:
 }
 
 // Test 22
-function redondearNumero(num) {
+function redondearNumero(num) { return Math.round(num)
 	// Redondea "num" al entero más próximo y devuélvelo
 	// Tu código:
 }
