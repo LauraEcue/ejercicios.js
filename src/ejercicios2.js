@@ -49,7 +49,11 @@ function clasificarTriangulo(lado1, lado2, lado3) {
 
 
 // Test 3:
-function calcularDescuento(precio, esMiembro, esFinDeSemana) {
+function calcularDescuento(precio, esMiembro, esFinDeSemana) { let descuento = 0;
+	if ( esMiembro && esFinDeSemana) { descuento = 0.30;} 
+	else if (esMiembro || esFinDeSemana) {descuento = 0.15;} 
+	else { descuento = 0;}
+	let total = precio - (precio * descuento) ; return total; 
 	// Recibe: precio (número), esMiembro (boolean), esFinDeSemana (boolean)
 	// Reglas de descuento:
 	// - Si es miembro Y es fin de semana: 30% de descuento
