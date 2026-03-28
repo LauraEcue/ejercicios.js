@@ -64,7 +64,14 @@ function calcularDescuento(precio, esMiembro, esFinDeSemana) { let descuento = 0
 }
 
 // Test 4:
-function obtenerDiaSemana(numero) {
+function obtenerDiaSemana(numero) { if (numero === 1 ) {return "Lunes"}
+else if (numero === 2 ) {return "Martes"} 
+else if (numero === 3 ) {return "Miercoles"} 
+else if (numero === 4 ) {return "Jueves"} 
+else if (numero === 5 ) {return "Viernes"}
+else if (numero === 6 ) {return "Sabado"}
+else if (numero === 7 ) {return "Domingo"}
+else {return "Día inválido"}
 	// Recibe un número del 1 al 7.
 	// Devuelve el nombre del día correspondiente usando switch:
 	// 1 = "Lunes", 2 = "Martes", ..., 7 = "Domingo"
@@ -73,7 +80,8 @@ function obtenerDiaSemana(numero) {
 }
 
 // Test 5:
-function esAnioBisiesto(anio) {
+function esAnioBisiesto(anio) { if ((anio % 4 === 0 && anio % 100 !== 0) ||
+(anio % 400 === 0)) { return true; } else {return false;}
 	// Recibe un número representando un año.
 	// Devuelve true si es bisiesto, false si no lo es.
 	// Regla: Es bisiesto si es divisible por 4,
@@ -85,7 +93,8 @@ function esAnioBisiesto(anio) {
 // ██████  OPERADORES LÓGICOS Y MATEMÁTICOS ████████████████████████
 
 // Test 6:
-function validarContraseña(password) {
+function validarContraseña(password) { return password.length >= 8 &&
+	/[A-Z]/.test(password) && /[0-9]/.test(password);
 	// Recibe un string con una contraseña.
 	// Devuelve true si cumple TODAS estas condiciones:
 	// - Tiene al menos 8 caracteres
@@ -97,7 +106,11 @@ function validarContraseña(password) {
 }
 
 // Test 7:
-function calcularIMC(peso, altura) {
+function calcularIMC(peso, altura) { let imc = peso / (altura * altura);
+	if (imc < 18.5 ) {return "Bajo peso"}
+	else if (imc < 25) {return "Peso normal"} 
+	else if (imc < 30) {return "Sobrepeso"}
+	else {return "Obesidad"}
 	// Recibe: peso (kg, número), altura (metros, número)
 	// Calcula el IMC: peso / (altura * altura)
 	// Devuelve un string con la clasificación:
@@ -109,7 +122,8 @@ function calcularIMC(peso, altura) {
 }
 
 // Test 8:
-function esMultiplo(num1, num2) {
+function esMultiplo(num1, num2) { return num1 % num2 === 0 ||
+	num2 % num1 === 0
 	// Recibe dos números enteros.
 	// Devuelve true si num1 es múltiplo de num2 o viceversa.
 	// Ejemplo: esMultiplo(10, 5) → true, esMultiplo(7, 3) → false
@@ -117,7 +131,27 @@ function esMultiplo(num1, num2) {
 }
 
 // Test 9:
-function obtenerEstacion(mes) {
+function obtenerEstacion(mes) { switch (mes) {
+	case 12:
+		case 1:
+			case 2: 
+			return "Invierno"; 
+
+	case 3:
+		case 4:
+			case 5:
+				return "Primavera";
+	case 6:
+		case 7:
+			case 8:
+				return "Verano";
+	case 9:
+		case 10:
+			case 11:
+				return "Otoño";
+				default: 
+				return "Mes inválido"							
+}
 	// Recibe un número del 1 al 12 representando el mes.
 	// Devuelve la estación del año (hemisferio norte) usando switch:
 	// - Diciembre, Enero, Febrero → "Invierno"
@@ -129,7 +163,8 @@ function obtenerEstacion(mes) {
 }
 
 // Test 10:
-function calcularPropina(total, porcentaje) {
+function calcularPropina(total, porcentaje) { let propina = total * (porcentaje / 100);
+	return Number(propina.toFixed(2))
 	// Recibe: total de la cuenta (número), porcentaje de propina (número, ej: 10 para 10%)
 	// Devuelve el monto de la propina redondeado a 2 decimales.
 	// Ejemplo: calcularPropina(100, 15) → 15.00
