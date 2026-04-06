@@ -166,7 +166,7 @@ function obtenerEstacion(mes) { switch (mes) {
 function calcularPropina(total, porcentaje) { let propina = total * (porcentaje / 100);
 	return Number(propina.toFixed(2))
 	// Recibe: total de la cuenta (número), porcentaje de propina (número, ej: 10 para 10%)
-	// Devuelve el monto de la propina redondeado a 2 decimales.
+	// Devuelve el monto de la propina redondeado a1 2 decimales.
 	// Ejemplo: calcularPropina(100, 15) → 15.00
 	// Pista: Usa toFixed(2) y luego convierte a número si es necesario.
 	// Tu código:
@@ -175,7 +175,8 @@ function calcularPropina(total, porcentaje) { let propina = total * (porcentaje 
 // ██████  STRINGS Y VALIDACIONES ████████████████████████
 
 // Test 11:
-function esPalabraPalindroma(palabra) {
+function esPalabraPalindroma(palabra) { let texto = palabra.toLowerCase();
+	return texto === texto.split("").reverse().join("");
 	// Recibe un string.
 	// Devuelve true si la palabra se lee igual de izquierda a derecha
 	// y de derecha a izquierda (ignora mayúsculas/minúsculas).
@@ -185,6 +186,10 @@ function esPalabraPalindroma(palabra) {
 
 // Test 12:
 function contarVocales(texto) {
+	let contador = 0 
+	let palabra = texto.toLowerCase()
+	for (let letra of palabra) {if ("aeiou".includes(letra)){ contador++}
+} return contador
 	// Recibe un string.
 	// Devuelve el número total de vocales (a, e, i, o, u) que contiene.
 	// No distingue entre mayúsculas y minúsculas.
@@ -194,6 +199,11 @@ function contarVocales(texto) {
 
 // Test 13:
 function formatearNombre(nombre, apellido, mayusculas) {
+	if (mayusculas) { return (nombre + " " + apellido).toUpperCase()}
+	else { let nom = nombre[0].toUpperCase() + nombre.slice(1).toLowerCase()
+		let ape = apellido[0].toUpperCase() + apellido.slice(1).toLowerCase()
+		return nom + " " + ape
+	}
 	// Recibe: nombre (string), apellido (string), mayusculas (boolean)
 	// Devuelve el nombre completo formateado:
 	// - Si mayusculas es true: "NOMBRE APELLIDO"
@@ -206,7 +216,11 @@ function formatearNombre(nombre, apellido, mayusculas) {
 // ██████  BUCLES BÁSICOS ████████████████████████
 
 // Test 14:
-function sumarHasta(limite) {
+function sumarHasta(limite) { let suma = 0
+	for (let i = 1; i <= limite; i++) {
+		suma += i;
+	}
+	return suma;
 	// Recibe un número entero positivo.
 	// Devuelve la suma de todos los números desde 1 hasta ese límite (inclusive).
 	// Ejemplo: sumarHasta(5) → 1+2+3+4+5 = 15
@@ -216,6 +230,9 @@ function sumarHasta(limite) {
 
 // Test 15:
 function obtenerParesHasta(limite) {
+	let pares = [];
+	for (let i = 0; i<= limite; i++)
+	{ if (i % 2 === 0) {pares.push(i);}} return pares;
 	// Recibe un número entero positivo.
 	// Devuelve un array con todos los números pares desde 0 hasta el límite (inclusive).
 	// Ejemplo: obtenerParesHasta(10) → [0, 2, 4, 6, 8, 10]
@@ -224,7 +241,10 @@ function obtenerParesHasta(limite) {
 }
 
 // Test 16:
-function factorial(n) {
+function factorial(n) { let resultado = 1
+	for (let i = 1; i <= n; i++) {
+		resultado *= i;
+	} return resultado;
 	// Recibe un número entero no negativo.
 	// Devuelve el factorial de ese número (n! = n × (n-1) × ... × 1).
 	// Ejemplo: factorial(5) → 5×4×3×2×1 = 120
@@ -235,6 +255,11 @@ function factorial(n) {
 
 // Test 17:
 function buscarNumero(array, objetivo) {
+	for (let i = 0; i < array.length; i++) {
+		if (array[i] === objetivo) {
+			return true;
+		}
+	} return false;
 	// Recibe: array (de números), objetivo (número a buscar)
 	// Devuelve true si el objetivo está en el array, false en caso contrario.
 	// Usa un bucle for para recorrer el array (no uses .includes()).
